@@ -16,5 +16,4 @@ const initialState = {}
 // store is created here the reducer which is passes is the combined reducer 
 const store = createStore(reducer , initialState); 
 
-
 export default store ; 
