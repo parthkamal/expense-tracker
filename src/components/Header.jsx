@@ -1,14 +1,27 @@
 import React from 'react';
+import './style/Header.css';
 
-
-const headerStyle = { 
-
-}
 
 const Header = () => {
     return (
-        <div style={headerStyle}>
-            header
+        <div className='header-container' >
+            <div className='header'>
+                <div className='header-logo'>
+                    Expense Tracker  <i className="fi fi-rr-credit-card"></i>
+                </div>
+
+                <div>
+                    <a href='https://google.com' className='header-button'>
+                        <i className="devicon-github-original"></i>
+                        start
+                    </a>
+                </div>
+
+            </div>
+
+
+
+
         </div>
     );
 }
