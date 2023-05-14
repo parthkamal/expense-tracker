@@ -3,22 +3,21 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Footer from './components/Footer';
 import { Route, Routes, Navigate } from 'react-router-dom';
+import AddExpense from './pages/AddExpense';
 
 const App = () => {
   return (
     <div>
-      <Header/>
-      <Home/>
-      <Footer/>
-
+    <Header/>
       {/* defined the routes */}
       <Routes>
-        <Route path='/' exact />
-        <Route path='/add-expense' exact />
+        <Route path='/'element={<Home/>} exact />
+        <Route path='/add-expense' element={<AddExpense/>} exact />
 
         {/* error route if any other routes is accessed the page will be redirected to home ie '/' */}
         <Route  path='*' element={<Navigate to='/' />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }
