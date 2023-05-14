@@ -1,0 +1,120 @@
+//expense tracker notes
+
+
+//components of redux
+
+
+store -> defines -> ui -> triggers -> action -> sent to -> reducer -> updates -> store -> contains -> state
+
+
+The app is packed inside the browserrouter ( to enable routing ) and then provider to wrap the app with the redux store
+
+All the redux methods (store, reducers, actions, ui ) are there in /src/redux
+
+useLocation to perform conditional rendering. 
+useHistory hooks to navigate between the pages
+
+Homepage = header + top  +expenseList + footer.
+Add Expense = header + othertop + add form + footer
+
+
+
+Now talking about the redux 
+
+The store have two properties one is expenseList : [], and the other is query
+
+There are types of actions types
+Add expense ( this actions is dispatched when the new expense is added to the list.
+Delete expense (this action is dispatched when the new expense is deleted from the expense list.
+Search expense (this action is dispatch each time when we type the query in the search bar.
+
+Tech stack - html , css ,javascript , jsx, reactjs, react-redux
+Concepts learned - useHistory, useNavigate, useSelector, react-redux, localStorage, 
+
+Used local storage for caching the state of the app using react redux
+
+expense -tracker app
+
+
+
+Project Title: Expense Tracker Application
+
+
+Sure, here is a project description with 5 detailed long points for your resume:
+
+Project Title: Expense Tracker Application
+
+Project Description:
+
+This project is an expense tracker application that uses ReactJS as the front-end library. The application has the following features:
+
+Add and delete expenses from the list.
+The list of expenses is defined in the store, which uses React Redux to manage the state of the application.
+The application is fully responsive.
+The search functionality allows users to filter the list of expenses by title.
+The list of expenses is cached so that it is maintained even after the page is refreshed.
+
+
+
+Project Goals:
+
+The goals of this project were to:
+
+Learn how to use ReactJS to build a front-end application.
+Learn how to use React Redux to manage the state of an application.
+Learn how to make an application fully responsive.
+Learn how to implement search functionality in an application.
+Learn how to cache data in an application.
+
+Project Accomplishments:
+
+The following accomplishments were achieved during the development of this project:
+
+The application was built using ReactJS and React Redux.
+The application is fully responsive and works on all screen sizes.
+The search functionality allows users to filter the list of expenses by title.
+The list of expenses is cached so that it is maintained even after the page is refreshed.
+Project Challenges:
+
+The following challenges were encountered during the development of this project:
+
+Learning how to use ReactJS and React Redux.
+Making the application fully responsive.
+Implementing search functionality in the application.
+Caching data in the application.
+Project Lessons Learned:
+
+The following lessons were learned during the development of this project:
+
+ReactJS is a powerful framework for building front-end applications.
+React Redux is a great way to manage the state of an application.
+It is important to make an application fully responsive so that it works on all screen sizes.
+Search functionality is a valuable feature for users.
+Caching data can improve the performance of an application.
+Project Impact:
+
+This project has the potential to impact users by helping them to track their expenses and budget their money more effectively. The application is also a valuable learning experience for developers who are interested in learning how to use ReactJS, React Redux, and other front-end development technologies.
+
+
+I was able to successfully complete all of the goals of this project. I learned how to use ReactJS, React Redux, and localStorage. I also created a fully responsive application with a search functionality.
+
+Project Skills:
+
+The skills that I used in this project include:
+
+ReactJS
+React Redux
+localStorage
+HTML
+CSS
+JavaScript
+Project Challenges:
+
+The biggest challenge that I faced in this project was learning React Redux. I had never used a state management library before, so it took me some time to get used to it. However, I was able to overcome this challenge by reading the documentation and watching tutorials.
+
+Project Benefits:
+
+This project has benefited me in several ways. First, it helped me to learn ReactJS, React Redux, and localStorage. These are all valuable skills that I can use in future projects. Second, it helped me to improve my HTML, CSS, and JavaScript skills. Third, it helped me to develop my problem-solving skills. I had to overcome several challenges in this project, which helped me to become a better problem solver.
+
+I hope this project description is helpful for your resume. Please let me know if you have any questions.
+
