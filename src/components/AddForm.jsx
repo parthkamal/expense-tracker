@@ -47,6 +47,7 @@ const AddForm = () => {
         const data = {id,title,amount,category,createdAt: new Date()}
 
         dispatch(addExpense(data));
+        console.log(data);
         const notify =()=> toast('added data successfully!!');
         notify();
     }

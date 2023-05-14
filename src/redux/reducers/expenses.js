@@ -1,4 +1,5 @@
-import { ADD_EXPENSE } from "../action-types/expenses";
+import { updateLocale } from "moment";
+import { ADD_EXPENSE, DELETE_EXPENSE } from "../action-types/expenses";
 
 const initialState = {
     expenseList: [],
@@ -15,6 +16,20 @@ const expenseReducer = (state = initialState, action) => {
             return {
                 ...state,
                 expenseList: [...state.expenseList, action.data]
+            }
+        }
+
+        case DELETE_EXPENSE: {
+            const {data} = action;
+            const {id} = data; 
+            const {expenseList} = state; 
+            const updatedList  = expenseList.filter( (item) => item.id!==id); 
+
+            console.log(updatedList);
+
+            return {
+                ...state,
+                expenseList: updatedList,
             }
         }
 

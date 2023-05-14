@@ -11,7 +11,7 @@ const Header = () => {
                 </div>
 
                 <div>
-                    <a href='https://google.com' className='header-button'>
+                    <a href='https://github.com/parthkamal/' className='header-button'>
                         <i className="devicon-github-original"></i>
                         start
                     </a>
