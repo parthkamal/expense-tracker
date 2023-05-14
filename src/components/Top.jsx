@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style/Top.css';
 import { useLocation } from 'react-router-dom';
+import OtherTop from './OtherTop';
 
 const Top = () => {
 
@@ -24,8 +25,7 @@ const Top = () => {
                         <label>Add</label>
                     </div>
                 </div>
-                :
-                <div>other top fold</div>}
+            :<OtherTop/>}
         </div>
     );
 }
