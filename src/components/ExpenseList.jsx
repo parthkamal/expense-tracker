@@ -10,7 +10,12 @@ import 'react-toastify/dist/ReactToastify.css';
 const ExpenseList = () => {
 
     const expenses = useSelector(state => state.expenses);
-    const { expenseList: list } = expenses;
+    const { expenseList: list , query } = expenses;
+
+    const filteredList = list.filter(item => item.title.includes(query));
+
+    console.log(query);
+
 
 
     useEffect(() => {
@@ -22,7 +27,7 @@ const ExpenseList = () => {
 
     return (
         <div className='expense-list'>
-            {list.length ? list.map((expense) => <Card id={expense.id} expense={expense} />) :
+            {filteredList.length ? filteredList.map((expense) => <Card id={expense.id} expense={expense} />) :
 
                 <div className='empty-state'> <label> oh your list is empty</label> </div>}
             <ToastContainer position="bottom-left" autoClose='1000' />

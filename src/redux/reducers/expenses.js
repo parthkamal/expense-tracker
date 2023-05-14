@@ -1,6 +1,6 @@
 import { updateLocale } from "moment";
-import { ADD_EXPENSE, DELETE_EXPENSE } from "../action-types/expenses";
-import { json } from "react-router-dom";
+import { ADD_EXPENSE, DELETE_EXPENSE, SEARCH_EXPENSE } from "../action-types/expenses";
+import { searchExpense } from "../actions/expenses";
 
 
 
@@ -16,6 +16,7 @@ const initialList =()=> {
 
 const initialState = {
     expenseList: initialList(),
+    query: ""
 
 }
 
@@ -46,6 +47,15 @@ const expenseReducer = (state = initialState, action) => {
                 ...state,
                 expenseList: updatedList,
             }
+        }
+
+        case SEARCH_EXPENSE: {
+            const {query} = action;
+            return {
+                ...state, 
+                query
+            }
+
         }
 
         default:

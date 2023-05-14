@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './style/Top.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import OtherTop from './OtherTop';
+import { useDispatch } from 'react-redux';
+import { searchExpense } from '../redux/actions/expenses';
 
 const Top = () => {
 
@@ -12,11 +14,19 @@ const Top = () => {
 
     const location = useLocation();
     const navigate = useNavigate(); 
+    const dispatch = useDispatch();
+
+
 
 
     //this will push the pathname to /add-expense
     const handleClick =() => {
-        navigate('/add-expense')
+        navigate('/add-expense');
+    }
+
+    const handleQuery =(e) => {
+        setQuery(e.target.value);
+        dispatch(searchExpense(query));
     }
 
     return (
@@ -25,7 +35,7 @@ const Top = () => {
                 <div className='home-top'>
                     <div className='searchbar'>
                         <i className='fi-rr-search'></i>
-                        <input value={query} placeholder='search for expenses' onChange={(e) => setQuery(e.target.value)} />
+                        <input value={query} placeholder='search for expenses' onChange={(e)=>handleQuery(e)} />
                     </div>
                     <div className='add-button'>
                         <i className='fi-rr-add'></i>
