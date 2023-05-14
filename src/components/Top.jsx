@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style/Top.css';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import OtherTop from './OtherTop';
 
 const Top = () => {
@@ -12,9 +12,12 @@ const Top = () => {
 
     const location = useLocation();
 
+
+    //this will push the pathname to /add-expense
+
     return (
         <div className='top'>
-            {(location.pathname === '/') ?
+            {(location.pathname !== '/add-expense') ?
                 <div className='home-top'>
                     <div className='searchbar'>
                         <i className='fi-rr-search'></i>
@@ -22,7 +25,7 @@ const Top = () => {
                     </div>
                     <div className='add-button'>
                         <i className='fi-rr-add'></i>
-                        <label>Add</label>
+                        <Link to={'/add-expense'}>Add</Link>
                     </div>
                 </div>
             :<OtherTop/>}
