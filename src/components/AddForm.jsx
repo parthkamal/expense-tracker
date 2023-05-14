@@ -1,8 +1,15 @@
+import shortid from 'shortid';
+
 import React, { useState } from 'react';
 import './style/AddForm.css';
 import Categories from '../constants/add-expense';
 import { useDispatch } from 'react-redux';
 import { addExpense } from '../redux/actions/expenses';
+
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const AddForm = () => {
 
     //capturing the form details using useState hook
@@ -30,13 +37,18 @@ const AddForm = () => {
 
     const handleSubmit = () => {
         if (title === ''||amount===''|| category===''){
-            console.log('please add properly ');
+            const notify =()=> toast('please enter the valid data');
+            notify();
             return;
         }
 
-        const data = {title,amount,category,createdAt: new Date()}
+        const id = shortid.generate();
+
+        const data = {id,title,amount,category,createdAt: new Date()}
 
         dispatch(addExpense(data));
+        const notify =()=> toast('added data successfully!!');
+        notify();
     }
 
 
@@ -71,6 +83,7 @@ const AddForm = () => {
                     <label>Add</label>
                     <i className='fi-rr-paper-plane'></i>
                 </div>
+                <ToastContainer position="bottom-left" autoClose='1000'/>
             </div>
         </div>
     );

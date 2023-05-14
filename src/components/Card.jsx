@@ -6,7 +6,7 @@ const Card = (props) => {
 
     return (
         <div key={id} >
-        item
+        {expense.title}
         </div>
     );
 }

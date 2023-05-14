@@ -12,7 +12,6 @@ const initialState = {
 const expenseReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_EXPENSE: {
-            console.log(action.data)
             return {
                 ...state,
                 expenseList: [...state.expenseList, action.data]
