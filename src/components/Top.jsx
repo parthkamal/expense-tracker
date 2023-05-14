@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style/Top.css';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import OtherTop from './OtherTop';
 
 const Top = () => {
@@ -11,9 +11,13 @@ const Top = () => {
     //we also have to apply conditional rendering if the route changes 
 
     const location = useLocation();
+    const navigate = useNavigate(); 
 
 
     //this will push the pathname to /add-expense
+    const handleClick =() => {
+        navigate('/add-expense')
+    }
 
     return (
         <div className='top'>
@@ -25,7 +29,7 @@ const Top = () => {
                     </div>
                     <div className='add-button'>
                         <i className='fi-rr-add'></i>
-                        <Link to={'/add-expense'}>Add</Link>
+                        <label onClick={handleClick}>Add</label>
                     </div>
                 </div>
             :<OtherTop/>}
